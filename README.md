@@ -185,6 +185,8 @@ Para instalar PHPMyAdmin, sigue estos pasos:
     ```
 
 16. Pega la siguiente configuración:
+<!-- Recuerda cambiar "tudominio.com" por el que configuraste con cerbot -->
+
 ```nginx
 server {
     listen 80;
