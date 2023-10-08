@@ -206,8 +206,8 @@ server {
     error_log  /var/log/nginx/tudominio.app-error.log error;
 
     # allow larger file uploads and longer script runtimes
-    client_max_body_size 100m;
-    client_body_timeout 120s;
+    client_max_body_size 6000m; # Aumenta el tamaño máximo de carga a 6 GB
+    client_body_timeout 300s;    # Aumenta el tiempo de espera del cuerpo del cliente
 
     sendfile off;
 
@@ -237,7 +237,7 @@ server {
         fastcgi_pass unix:/run/php/php8.1-fpm.sock;
         fastcgi_index index.php;
         include fastcgi_params;
-        fastcgi_param PHP_VALUE "upload_max_filesize = 500M \n post_max_size=500M";
+        fastcgi_param PHP_VALUE "upload_max_filesize = 6000M \n post_max_size=6000M"; # Aumenta el límite de carga en PHP
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         fastcgi_param HTTP_PROXY "";
         fastcgi_intercept_errors off;
@@ -253,6 +253,7 @@ server {
         deny all;
     }
 }
+
 ```
 17. Habilita la configuración para NGINX:
 
