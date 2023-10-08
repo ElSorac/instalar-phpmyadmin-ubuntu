@@ -185,9 +185,8 @@ Para instalar PHPMyAdmin, sigue estos pasos:
     ```
 
 16. Pega la siguiente configuración:
-
-    ```nginx
-    server {
+```nginx
+server {
     listen 80;
     server_name tudominio.com;
     return 301 https://$server_name$request_uri;
@@ -251,8 +250,7 @@ server {
         deny all;
     }
 }
-    ```
-
+```
 17. Habilita la configuración para NGINX:
 
     ```
