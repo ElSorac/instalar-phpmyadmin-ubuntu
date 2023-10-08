@@ -42,7 +42,7 @@ Para instalar NGINX, sigue estos pasos:
 3. Abre el archivo de configuración de MariaDB:
 
     ```
-    nano /etc/mysql/my.cnf
+    nano /etc/mysql/mariadb.conf.d/50-server.cnf
     ```
 
 4. Agrega la siguiente línea en el archivo:
