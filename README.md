@@ -154,7 +154,7 @@ Para instalar PHPMyAdmin, sigue estos pasos:
     nano config.inc.php
     ```
 
-11. Cambia el secreto de Blowfish con la nueva clave y agrega la siguiente línea:
+11. Cambie el secreto de Blowfish con la nueva clave, generelo aquí [https://phpsolved.com/phpmyadmin-blowfish-secret-generator/](https://phpsolved.com/phpmyadmin-blowfish-secret-generator/) y cópielo y péguelo en la configuración y agregue la siguiente linea.
 
     ```php
     $cfg['TempDir'] = '/tmp/';
